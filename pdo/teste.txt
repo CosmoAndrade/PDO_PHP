@@ -1,0 +1,29 @@
+
+// Rodar php no terminal
+php -S localhost:8080
+
+
+CONEXÃO COM BANCO DE DADOS
+
+$endereco = "mysql:dbname=orcamento;host=localhost";
+$user = "root";
+$senha = "";
+
+$pdo = new PDO($endereco,$user,$senha);
+
+----------------------------------------
+
+INSERT 
+
+$nome      = $_POST['nome'];
+$email     = $_POST['email'];
+$mensagem  = $_POST['mensagem'];
+
+$sql = "INSERT INTO orcamentosimples (nome,email,mensagem) VALUES ('$nome','$email','$mensagem')";
+
+$pdo->query($sql);
+
+--------------------------------------
+
+
+
